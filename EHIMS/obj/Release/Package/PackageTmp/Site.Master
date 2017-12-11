@@ -1,0 +1,264 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="EHIMS.SiteMaster" %>
+
+<!DOCTYPE html>
+
+<html lang="en">
+
+
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <title>Welcome - EHIMS</title>
+    <asp:ContentPlaceHolder ID="form1" runat="server">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    </asp:ContentPlaceHolder>
+  <!-- Bootstrap core CSS-->
+
+  <link href="template/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Custom fonts for this template-->
+  <link href="template/vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+  <!-- Page level plugin CSS-->
+  <link href="template/vendor/datatables/dataTables.bootstrap4.css" rel="stylesheet">
+  <!-- Custom styles for this template-->
+  <link href="template/css/sb-admin.css" rel="stylesheet">
+    
+</head>
+
+<body class="fixed-nav sticky-footer bg-dark" id="page-top">
+  <!-- Navigation-->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="mainNav">
+    <a class="navbar-brand" href="Dashboard.aspx">EHIMS</a>
+    <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarResponsive">
+      <ul class="navbar-nav navbar-sidenav" id="exampleAccordion">
+
+          <li class="nav-item">
+          <div class="form-inline my-2 my-lg-0 mr-lg-2">
+            <div class="input-group">
+              <input class="form-control" type="text" placeholder="Search for...">
+              <span class="input-group-btn">
+                <button class="btn btn-primary" type="button">
+                  <i class="fa fa-search"></i>
+                </button>
+              </span>
+            </div>
+          </div>
+        </li>
+
+        <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Dashboard">
+          <a class="nav-link" href="Dashboard.aspx">
+            <i class="fa fa-fw fa-dashboard"></i>
+            <span class="nav-link-text">Dashboard</span>
+          </a>
+        </li>
+        <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Patients">
+           <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#collapsePatients" data-parent="#exampleAccordion">
+            <i class="fa fa-user"></i>
+            <span class="nav-link-text">Reg Officer</span>
+          </a>
+            <ul class="sidenav-second-level collapse" id="collapsePatients">
+            <li>
+              <a href="NewPatient.aspx">Add Patient</a>
+            </li>
+            <li>
+              <a href="DeletePage.aspx">Delete Patient</a>
+            </li>
+          </ul>
+        </li>
+        <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Nurses">
+          <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#collapseNurses" data-parent="#exampleAccordion">
+            <i class="fa fa-user-md"></i>
+            <span class="nav-link-text">Nurses</span>
+          </a>
+            <ul class="sidenav-second-level collapse" id="collapseNurses">
+            <li>
+              <a href="PatientFile">Patient file</a>
+            </li>
+            <li>
+              <a href="cards.html"></a>
+            </li>
+          </ul>
+        </li>
+        <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Doctors">
+          <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#collapseComponents" data-parent="#exampleAccordion">
+            <i class="fa fa-user-md"></i>
+            <span class="nav-link-text">Doctors</span>
+          </a>
+          <ul class="sidenav-second-level collapse" id="collapseComponents">
+            <li>
+              <a href="navbar.html">Patient record</a>
+            </li>
+            <li>
+              <a href="cards.html"></a>
+            </li>
+          </ul>
+        </li>
+        <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Example Pages">
+          <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#collapseExamplePages" data-parent="#exampleAccordion">
+            <i class="fa fa-heartbeat"></i>
+            <span class="nav-link-text">laboratory</span>
+          </a>
+          <ul class="sidenav-second-level collapse" id="collapseExamplePages">
+            <li>
+              <a href="login.html">Patient test</a>
+            </li>
+            
+          </ul>
+        </li>
+        <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Menu Levels">
+          <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#collapseMulti" data-parent="#exampleAccordion">
+            <i class="fa fa-medkit"></i>
+            <span class="nav-link-text">Pharmacy</span>
+          </a>
+          <ul class="sidenav-second-level collapse" id="collapseMulti">
+            <li>
+              <a href="#">Drug prescription</a>
+            </li>
+            
+            
+          </ul>
+        </li>
+        
+      </ul>
+      <ul class="navbar-nav sidenav-toggler">
+        <li class="nav-item">
+          <a class="nav-link text-center" id="sidenavToggler">
+            <i class="fa fa-fw fa-angle-left"></i>
+          </a>
+        </li>
+      </ul>
+      <ul class="navbar-nav ml-auto">
+        
+        
+        
+        <li class="nav-item">
+          <a class="nav-link" data-toggle="modal" data-target="#exampleModal">
+            <i class="fa fa-fw fa-sign-out"></i>Logout</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  
+
+
+        <asp:ContentPlaceHolder ID="MainContent" runat="server">
+            </asp:ContentPlaceHolder>
+        <footer class="sticky-footer">
+      <div class="container">
+        <div class="text-center">
+          <small>Copyright © EHIMS 2017</small>
+        </div>
+      </div>
+    </footer>
+
+
+
+         <!-- Bootstrap core JavaScript-->
+    <script src="template/vendor/jquery/jquery.min.js"></script>
+    <script src="template/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <!-- Core plugin JavaScript-->
+    <script src="template/vendor/jquery-easing/jquery.easing.min.js"></script>
+    <!-- Page level plugin JavaScript-->
+    <script src="template/vendor/chart.js/Chart.min.js"></script>
+    <script src="template/vendor/datatables/jquery.dataTables.js"></script>
+    <script src="template/vendor/datatables/dataTables.bootstrap4.js"></script>
+    <!-- Custom scripts for all pages-->
+    <script src="template/js/sb-admin.min.js"></script>
+    <!-- Custom scripts for this page-->
+    <script src="template/js/sb-admin-datatables.min.js"></script>
+    <script src="template/js/sb-admin-charts.min.js"></script>
+  
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+     <%--i added comment from here--%>
+
+
+
